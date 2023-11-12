@@ -21,6 +21,15 @@ const cursos = [
     autor: "Gabriel Santos",
     pais: "Brasil",
     descricaoAula: "Curso abrangente para dominar o desenvolvimento Full Stack com Node.js.",
+    idioma: "Português",
+    palavrasChave: ["Node.js", "Desenvolvimento Web", "Full Stack"],
+    oQueAprendera: [
+      "Construção de interfaces responsivas com HTML e CSS",
+      "Desenvolvimento de APIs utilizando Node.js e Express",
+      "Integração com banco de dados NoSQL (MongoDB)",
+      "Construção de interfaces dinâmicas com React.js"
+    ],
+    tecnologiasUtilizadas: ["Node.js", "Express.js", "MongoDB", "React.js"],
     aulas: [
       {
         nome: "Introdução ao Node.js",
@@ -66,6 +75,15 @@ const cursos = [
     autor: "Ana Oliveira",
     pais: "Portugal",
     descricaoAula: "Curso abrangente para compreender os fundamentos da inteligência artificial com Python.",
+    idioma: "Inglês",
+    palavrasChave: ["Python", "Inteligência Artificial", "Machine Learning"],
+    oQueAprendera: [
+      "Fundamentos de IA e seu histórico",
+      "Aprendizado de Máquina com Python",
+      "Visão Computacional e processamento de imagens",
+      "Projeto Prático em IA com Python"
+    ],
+    tecnologiasUtilizadas: ["Python", "Scikit-Learn"],
     aulas: [
       {
         nome: "Fundamentos de IA",
@@ -111,6 +129,15 @@ const cursos = [
     autor: "Carlos Rodriguez",
     pais: "México",
     descricaoAula: "Curso abrangente para fortalecer a segurança da informação e proteção contra ameaças cibernéticas.",
+    idioma: "Espanhol",
+    palavrasChave: ["Cybersecurity", "Segurança da Informação", "Firewalls"],
+    oQueAprendera: [
+      "Criptografia e técnicas de codificação",
+      "Firewalls e Antivírus para proteção contra ameaças online",
+      "Teste de Penetração e avaliação de vulnerabilidades",
+      "Práticas de Segurança em Redes"
+    ],
+    tecnologiasUtilizadas: ["Cybersecurity", "Criptografia", "Firewalls"],
     aulas: [
       {
         nome: "Criptografia",
