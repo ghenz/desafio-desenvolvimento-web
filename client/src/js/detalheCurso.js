@@ -13,7 +13,6 @@ function retornaEstrelaPelaNota(nota) {
 
 setTimeout(async () => { 
   const curso = await fetch(`http://localhost:3000/cursos/${id}`).then(response => response.json());
-  console.log(curso);
 
   divDetalhe.innerHTML = `
     <div class="my-3 mx-1 p-4 d-flex flex-column">
@@ -42,10 +41,10 @@ setTimeout(async () => {
       </section>
 
       <div>
-          <h3 class="mt-3"Conteúdo do curso</h3>
+          <h3 class="mt-3">Conteúdo do curso</h3>
           ${curso.aulas.map((aula) => (
             `
-              <div class="card p-2">
+              <div class="card p-2 mb-3">
                 <h4 class="mt-3">${aula.nome}</h4>
                 <ul>
                   ${aula.secoes.map((secao) => `<li>${secao.nome} (${secao.tempo})</li>`).join('')}

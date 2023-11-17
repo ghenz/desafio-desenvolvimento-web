@@ -1,12 +1,49 @@
-img {
-    width: 58px;
-    height: 58px;
-    object-fit: contain;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.courses-icon {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
 }
 
 .checked {
   color: orange;
+}
+
+.add-to-cart-button {
+  text-decoration: none;
+  background-color: #f8f9fa;
+  padding: 5px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  text-wrap: nowrap;
+  color: #333;
+  font-weight: 600;
+  opacity: 0.8;
+  transition: .3s;
+}
+
+.add-to-cart-button:hover {
+  opacity: 1;
+  background-color: #e0e0e0;
+}
+
+@media screen and (max-width: 768px) {
+  .price-div {
+    align-items: flex-end;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  h2{
+    font-size: 18px;
+  }
+  .price-div {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 10px;
+  }
 }
