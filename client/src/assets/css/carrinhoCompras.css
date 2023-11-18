@@ -1,3 +1,8 @@
+body {
+  width: 100%;
+  height: 100vh;
+}
+
 .cart {
   position: relative;
 }
@@ -5,7 +10,7 @@
 .cart::after {
   content: attr(data-count);
   position: absolute;
-  top: 2px;
+  top: 0;
   left: 20px;
   background-color: #666;
   color: white;
@@ -17,4 +22,91 @@
   justify-content: center;
   font-size: 12px;
   font-weight: bold;
+}
+
+.container:has(.empty-cart-msg) {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#lista-cursos:has(.empty-cart-msg) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.empty-cart-msg {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.buy-courses {
+  text-decoration: none;
+  background-color: #f8f9fa;
+  color: #333;
+  border-radius: 5px;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.buy-courses:hover {
+  background-color: #666;
+  color: white;
+}
+
+.courses-icon {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.delete-from-cart-button {
+  text-decoration: none;
+  background-color: #f8f9fa;
+  padding: 5px 10px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  text-wrap: nowrap;
+  color: #333;
+  font-weight: 600;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.delete-from-cart-button:hover {
+  opacity: 1;
+  background-color: #e0e0e0;
+}
+
+.total-price {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .price-div {
+    align-items: flex-end;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  h2 {
+    font-size: 18px;
+  }
 }

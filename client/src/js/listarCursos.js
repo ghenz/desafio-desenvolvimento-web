@@ -1,3 +1,6 @@
+const alreadyPurchased =
+  JSON.parse(localStorage.getItem("carrinhoItens")) || [];
+
 function retornaEstrelaPelaNota(nota) {
   let estrelas = "";
   for (let index = 1; index <= 5; index++) {
@@ -16,13 +19,15 @@ setTimeout(async () => {
     response.json()
   );
 
-  console.log(cursos)
+  localStorage.setItem("cursos", JSON.stringify(cursos));
 
   divLista.innerHTML = cursos
     .map((curso) => {
       return `
-          <a class="nav-link" href="detalheCurso.html?id=${curso.id}" id=${curso.id}>
-            <div class="card my-3 mx-1 p-4 d-flex flex-md-row justify-content-between">
+          <a class="nav-link" href="detalheCurso.html?id=${curso.id}">
+            <div class="card my-3 mx-1 p-4 d-flex flex-md-row justify-content-between" id=${
+              curso.id
+            }>
               <div class="d-flex flex-column">
                 <div class="d-flex flex-row align-items-center gap-2">
                   <img class="courses-icon" src="${curso.logoTecnologia}"/>
@@ -38,11 +43,19 @@ setTimeout(async () => {
       } aulas</span>
               </div>
               <div class="d-flex flex-md-column justify-content-between align-items-end price-div">
-                <h5 class="mt-2 pt-2 text-end"><strong>R$${
-                  curso.preco
-                }</strong></h5>
+                <h5 class="mt-2 pt-2 text-end"><strong>${curso.preco.toLocaleString(
+                  "pt-BR",
+                  {
+                    style: "currency",
+                    currency: "BRL",
+                  }
+                )}</strong></h5>
                 <p class="text-end">
-                  <button type="button" class="btn-sm add-to-cart-button" id="add-to-cart-button">Adicionar ao carrinho</button>
+                <button type="button" class="btn-sm add-to-cart-button ${
+                  alreadyPurchased.includes(curso.id) ? "opacity-25" : ""
+                }" style="${
+        alreadyPurchased.includes(curso.id) ? "cursor: not-allowed;" : ""
+      }" id="add-to-cart-button">Adicionar ao carrinho</button>
                 </p>
               </div>
               

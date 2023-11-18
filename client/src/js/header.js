@@ -1,7 +1,7 @@
 const carrinhoItens = JSON.parse(localStorage.getItem('carrinhoItens')) || [];
 
 const header = `
-    <header id="header">
+    <header class="fixed-top" id="header">
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="home.html">Unidemy</a>

@@ -34,9 +34,26 @@
 
     <title>Carrinho de compras</title>
   </head>
-  <body>
-    <h1>Carrinho de compras</h1>
+  <body style="padding-top: 70px">
+    <div class="container">
+      <a href="../paginas/listarCursos.html" id="back-button"
+        ><img
+          src="../assets/images/back-button.jpg"
+          alt="Botão de voltar"
+          title="Voltar a página de cursos"
+          width="25"
+          height="25"
+      /></a>
+      <h1>Carrinho de compras</h1>
+      <main>
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div id="lista-cursos"></div>
+      </main>
+    </div>
 
+    <script defer src="../js/verificaApiConnection.js"></script>
     <script defer src="../js/header.js"></script>
     <script defer src="../js/carrinhoCompras.js"></script>
   </body>

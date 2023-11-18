@@ -157,8 +157,11 @@ const cursos = [
   }
 ];
 
+app.get('/', (_req, res) => {
+  res.json({message: "API running!"});
+})
 
-app.get('/cursos', (req, res) => {
+app.get('/cursos', (_req, res) => {
   res.json(cursos)
 })
 
