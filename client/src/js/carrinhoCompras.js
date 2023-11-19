@@ -94,7 +94,10 @@ function updateShoppingCart(buys) {
     }
 
     /* Não exibe ou não o botão de voltar */
-    if ($(".total-price").length > 0) {
+    if (
+      $(".total-price").length > 0 ||
+      window.location.href.includes("listarCursos.html")
+    ) {
       $("#back-button").css("display", "block");
     } else {
       $("#back-button").css("display", "none");

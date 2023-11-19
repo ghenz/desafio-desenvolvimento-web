@@ -1,5 +1,6 @@
 const alreadyPurchased =
   JSON.parse(localStorage.getItem("carrinhoItens")) || [];
+const cursos = JSON.parse(localStorage.getItem("cursos")) || [];
 
 function retornaEstrelaPelaNota(nota) {
   let estrelas = "";
@@ -15,12 +16,6 @@ const spinner = document.querySelector(".spinner-border");
 const divLista = document.querySelector("#lista-cursos");
 
 setTimeout(async () => {
-  const cursos = await fetch("http://localhost:3000/cursos").then((response) =>
-    response.json()
-  );
-
-  localStorage.setItem("cursos", JSON.stringify(cursos));
-
   divLista.innerHTML = cursos
     .map((curso) => {
       return `
