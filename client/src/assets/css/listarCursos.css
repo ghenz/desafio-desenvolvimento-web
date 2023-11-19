@@ -58,7 +58,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .price-div {
-    align-items: flex-end;
+    align-items: baseline !important;
     margin-top: 20px;
   }
 }

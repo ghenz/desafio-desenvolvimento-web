@@ -15,10 +15,10 @@ setTimeout(async () => {
   const curso = await fetch(`http://localhost:3000/cursos/${id}`).then(response => response.json());
 
   divDetalhe.innerHTML = `
-    <div class="my-3 mx-1 p-4 d-flex flex-column">
+    <div class="my-3 mx-1 p-2 d-flex flex-column">
       <section>
-        <div class="d-flex flex-row align-items-center gap-2">
-          <img src="${curso.logoTecnologia}"/>
+        <div class="d-flex flex-wrap  align-items-center gap-2">
+          <img class="img-fluid" src="${curso.logoTecnologia}"/>
           <h2 class="ms-1">${curso.nome}</h2>
         </div>
         <div class="my-2">${curso.tecnologiasUtilizadas.join(', ')}</div>

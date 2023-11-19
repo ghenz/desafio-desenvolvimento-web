@@ -80,7 +80,7 @@ function updateShoppingCart(buys) {
       `);
     } else {
       $("#lista-cursos").append(`
-      <div class="d-flex justify-content-between">
+      <div class="d-flex flex-wrap justify-content-between">
         <p class="total-price">Total: ${totalPrice.toLocaleString("pt-BR", {
           style: "currency",
           currency: "BRL",
