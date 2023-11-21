@@ -3,6 +3,11 @@ body {
   height: 100vh;
 }
 
+.logo {
+  width: 42px;
+  height: 42px;
+}
+
 .cart {
   position: relative;
 }

@@ -18,7 +18,7 @@ setTimeout(async () => {
     <div class="my-3 mx-1 p-2 d-flex flex-column">
       <section>
         <div class="d-flex flex-wrap  align-items-center gap-2">
-          <img class="img-fluid" src="${curso.logoTecnologia}"/>
+          <img class="img-fluid logo" src="${curso.logoTecnologia}"/>
           <h2 class="ms-1">${curso.nome}</h2>
         </div>
         <div class="my-2">${curso.tecnologiasUtilizadas.join(', ')}</div>
